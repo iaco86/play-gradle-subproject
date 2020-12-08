@@ -1,0 +1,14 @@
+plugins {
+    id 'idea'
+    id 'org.gradle.playframework'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Core - scala and play
+    implementation "org.scala-lang:scala-library:$scalaBuild"
+    implementation "com.typesafe.play:play_$scalaVersion:$playBuild"
+}

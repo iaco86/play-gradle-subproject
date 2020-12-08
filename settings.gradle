@@ -1,0 +1,5 @@
+rootProject.name = 'sandbox'
+
+include 'core'
+
+project(':core').projectDir = new File(settingsDir, 'modules/core')

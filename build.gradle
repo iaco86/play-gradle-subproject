@@ -1,0 +1,22 @@
+plugins {
+    id 'idea'
+    id 'org.gradle.playframework' version '0.10'
+    id 'nebula.ospackage-application' version '8.4.1' // Try to comment out this plugin
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(":core")
+
+    // Core - scala and play
+    implementation "org.scala-lang:scala-library:$scalaBuild"
+    implementation "com.typesafe.play:play_$scalaVersion:$playBuild"
+    implementation group: "com.typesafe.play", name: "play-guice_$scalaVersion", version: playBuild
+}
+
+play {
+    injectedRoutesGenerator = true
+}
